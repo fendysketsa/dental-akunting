@@ -31,7 +31,7 @@ class Overrider
         setting()->load(true);
 
         // Timezone
-        config(['app.timezone' => setting('localisation.timezone', 'UTC')]);
+        config(['app.timezone' => setting('localisation.timezone', 'ID')]);
         date_default_timezone_set(config('app.timezone'));
 
         // Email

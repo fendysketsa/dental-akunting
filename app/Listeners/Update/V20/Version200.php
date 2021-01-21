@@ -100,7 +100,7 @@ class Version200 extends Listener
 
         // Override settings
         config(['app.url' => url('/')]);
-        config(['app.timezone' => setting('general.timezone', 'UTC')]);
+        config(['app.timezone' => setting('general.timezone', 'ID')]);
         date_default_timezone_set(config('app.timezone'));
         app()->setLocale(setting('general.default_locale'));
 
