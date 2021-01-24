@@ -19,7 +19,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \App\Http\Middleware\HttpsProtocolMiddleware::class
+
     ];
 
     /**
@@ -29,6 +29,7 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
+            \App\Http\Middleware\HttpsProtocolMiddleware::class,
             'cookies.encrypt',
             'cookies.response',
             'session.start',
